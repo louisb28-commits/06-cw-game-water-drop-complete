@@ -152,3 +152,25 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .water-drop.popped { animation-duration: 0.01s; }
 }
+
+.milestone {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  padding: 10px 22px;
+  background: var(--cw-yellow);
+  color: var(--cw-navy);
+  font-weight: 800;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 4;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.milestone.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
